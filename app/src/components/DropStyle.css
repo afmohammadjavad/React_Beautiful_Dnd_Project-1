@@ -1,11 +1,13 @@
 .dropStyle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
   /* align-items: center; */
   padding: 0 100px;
+  padding-top: 1rem;
+  margin: auto;
   background-color: yellow;
   border: 1px solid black;
   width: 400px;
-  height: 300px;
+  min-height: 100vh;
 }
