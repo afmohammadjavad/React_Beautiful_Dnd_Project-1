@@ -1,7 +1,12 @@
 import withDraggable from "../hoc/withDraggable";
 
-const ItemDND = ({ item, itemStyle }) => {
-  return <div style={itemStyle}>{item.name}</div>;
+const ItemDND = ({ item }) => {
+  return (
+    <>
+      <div>&lt;{item.name}</div>
+      <div>{item.age}&gt;</div>
+    </>
+  );
 };
 
 export default withDraggable(ItemDND);

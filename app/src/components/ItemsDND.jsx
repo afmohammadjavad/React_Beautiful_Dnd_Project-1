@@ -2,7 +2,7 @@ import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import ItemDND from "./ItemDND";
 import './DropStyle.css'
 
-function ItemsDND({ items, setItems, itemStyle, boxStyle }) {
+function ItemsDND({ items, setItems }) {
   const handleDragEnd = (result) => {
     console.log(result);
     if (!result.destination) return;
@@ -20,7 +20,6 @@ function ItemsDND({ items, setItems, itemStyle, boxStyle }) {
         {(provided, snapshot) => (
           <div
             className="dropStyle"
-            // style={boxStyle}
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
@@ -30,7 +29,6 @@ function ItemsDND({ items, setItems, itemStyle, boxStyle }) {
                 item={item}
                 index={index}
                 draggableId={`drag-${index}`}
-                itemStyle={itemStyle}
               />
             ))}
             {provided.placeholder}
